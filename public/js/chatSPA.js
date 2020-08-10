@@ -1231,7 +1231,7 @@ var chatSPA = {
     },
     handleMediaUpload: function(){
         //$('#uploadMediaModal').modal('show');
-        var cloudinaryWidget = cloudinary.openUploadWidget({cloudName: "pubmat", secure: true, uploadPreset: "ChatMat",sources: chatSPA.uploadSourcesArray,}, (error, result) => { 
+        var cloudinaryWidget = cloudinary.openUploadWidget({cloudName: "Demo", secure: true, uploadPreset: "Demo",sources: chatSPA.uploadSourcesArray,}, (error, result) => { 
             if (!error && result && result.event === "success") { 
               console.log('Media Uploaded via Cloudinary. Here is the image info: ', result.info);
               chatSPA.handleMediaInputFromCloudinary(result.info);
