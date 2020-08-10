@@ -1,0 +1,325 @@
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>{{appName}} Chat</title>
+  <!-- App Credentials from Server-->
+  <meta name="appName" content="{{appName}}">
+  <!-- Favicon -->
+  <link href="/images/brand/favicon.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="/css/argon-dashboard.css?v=1.1.1" rel="stylesheet" />
+</head>
+
+<body class="">
+  <nav class="navbar navbar-vertical fixed-left navbar-expand-md navbar-light bg-white" id="sidenav-main">
+    <div class="container-fluid">
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Brand -->
+      <a class="navbar-brand pt-0" href="./index.html">
+        <img src="/images/brand/MatsChatAppLogo.png" class="navbar-brand-img" alt="MCA">
+      </a>
+      <!-- User -->
+      <ul class="nav align-items-center d-md-none">
+        <li class="nav-item dropdown">
+          <a class="nav-link nav-link-icon" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="ni ni-bell-55"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right" aria-labelledby="navbar-default_dropdown_1">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <div class="media align-items-center">
+              <span class="avatar avatar-sm rounded-circle">
+                <img alt="Image placeholder" src="/images/theme/team-1-800x800.jpg">
+              </span>
+            </div>
+          </a>
+          <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+            <div class=" dropdown-header noti-title">
+              <h6 class="text-overflow m-0">Welcome!</h6>
+            </div>
+            <a href="./examples/profile.html" class="dropdown-item">
+              <i class="ni ni-single-02"></i>
+              <span>My profile</span>
+            </a>
+            <a href="./examples/profile.html" class="dropdown-item">
+              <i class="ni ni-settings-gear-65"></i>
+              <span>Settings</span>
+            </a>
+            <a href="./examples/profile.html" class="dropdown-item">
+              <i class="ni ni-calendar-grid-58"></i>
+              <span>Activity</span>
+            </a>
+            <a href="./examples/profile.html" class="dropdown-item">
+              <i class="ni ni-support-16"></i>
+              <span>Support</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a href="#!" class="dropdown-item">
+              <i class="ni ni-user-run"></i>
+              <span>Logout</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <!-- Collapse -->
+      <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+        <!-- Collapse header -->
+        <div class="navbar-collapse-header d-md-none">
+          <div class="row">
+            <div class="col-6 collapse-brand">
+              <a href="./index.html">
+                <img src="/images/brand/MatsChatAppLogo.png">
+              </a>
+            </div>
+            <div class="col-6 collapse-close">
+              <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#sidenav-collapse-main" aria-controls="sidenav-main" aria-expanded="false" aria-label="Toggle sidenav">
+                <span></span>
+                <span></span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Form -->
+        <form class="mt-4 mb-3 d-md-none">
+          <div class="input-group input-group-rounded input-group-merge">
+            <input type="search" class="form-control form-control-rounded form-control-prepended" placeholder="Search" aria-label="Search">
+            <div class="input-group-prepend">
+              <div class="input-group-text">
+                <span class="fa fa-search"></span>
+              </div>
+            </div>
+          </div>
+        </form>
+        <h6 class="navbar-heading text-muted">
+            <!-- Chats -->
+            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-link">Chats</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-link"><i class="fas fa-plus"></i></button>
+                  </div>
+            </div>
+        </h6>
+        <!-- Navigation -->
+        <ul class="navbar-nav" id="chatSPAPublicChannelsNavList">
+            <!-- <li class="nav-item"><a class="nav-link " href="#"><i class="ni ni-planet text-blue"></i> Main</a></li> -->
+            <li class="nav-item">
+                <!-- <button type="button" class="btn btn-link btn-lg btn-block">Block level button</button> -->
+                <div class="btn-group" role="group">
+                    <button id="btnGroupPublicMain" type="button" class="btn btn-link btn-lg btn-block dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="ni ni-planet text-blue"></i> Main</button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupPublicMain">
+                        <button class="dropdown-item">Favourite</button>
+                        <button class="dropdown-item">Leave</button>
+                    </div>
+                  </div>
+            </li>
+            <!-- <li class="nav-item  active "><a class="nav-link  active " href="./index.html"><i class="ni ni-tv-2 text-primary"></i> Dashboard</a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link " href="./examples/icons.html"><i class="ni ni-planet text-blue"></i> Icons</a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link " href="./examples/maps.html"><i class="ni ni-pin-3 text-orange"></i> Maps</a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link " href="./examples/profile.html"><i class="ni ni-single-02 text-yellow"></i> User profile</a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link " href="./examples/tables.html"><i class="ni ni-bullet-list-67 text-red"></i> Tables</a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link" href="./examples/login.html"><i class="ni ni-key-25 text-info"></i> Login</a></li> -->
+          <!-- <li class="nav-item"><a class="nav-link" href="./examples/register.html"><i class="ni ni-circle-08 text-pink"></i> Register</a></li> -->
+        </ul>
+        <!-- Divider -->
+        <hr class="my-3">
+        <!-- Heading -->
+        <h6 class="navbar-heading text-muted">
+            <!-- DM's -->
+            <div class="btn-toolbar justify-content-between" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-link">DM's</button>
+                </div>
+                <div class="btn-group" role="group" aria-label="Second group">
+                    <button type="button" class="btn btn-link"><i class="fas fa-plus"></i></button>
+                  </div>
+            </div>
+        </h6>
+        <!-- Navigation -->
+        <ul id="chatSPADirectMessageNavList" class="navbar-nav mb-md-3">
+            <li class="nav-item">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupPublicMain" type="button" class="btn btn-link btn-lg btn-block dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-robot"></i> HelpBot</button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupPublicMain">
+                        <button class="dropdown-item">Favourite</button>
+                        <button class="dropdown-item">Close</button>
+                        <button class="dropdown-item">Block</button>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <div class="btn-group" role="group">
+                    <button id="btnGroupPublicMain" type="button" class="btn btn-link btn-lg btn-block dropdown-toggle nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user"></i> Bob</button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupPublicMain">
+                        <button class="dropdown-item">Favourite</button>
+                        <button class="dropdown-item">Close</button>
+                        <button class="dropdown-item">Block</button>
+                    </div>
+                </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="main-content">
+    <!-- Header -->
+    <div class="header bg-gradient-primary pb-8 pt-1">
+      <div class="container-fluid">
+        <div class="header-body">
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <!-- <div class="row"></div> -->
+      <!-- Setup for Chat -->
+      <div class="row">
+        <div class="col">
+          <div class="card shadow">
+            <div class="card-header border-0"><h3 class="mb-0" id="chatSPACurrentChatRoomTitle">Chat Room Name, <small>Chat Topic</small></h3></div>
+            <div class="table-responsive">
+              <table class="table align-items-left table-flush">
+                <tbody id="chatSPACurrentChannelMessagesContainer">
+
+
+
+
+
+
+                    <!-- Sample Chats -->
+                    <!-- Sample Text Message -->
+                    <tr>
+                        <td>
+                            <div class="row">
+                                <!-- <div class="col-auto">
+                                    <div class="icon icon-shape bg-danger text-white rounded-circle shadow">
+                                        <i class="fas fa-chart-bar"></i>
+                                    </div>
+                                </div> -->
+                                <div class="col">
+                                    <h5 class="card-title text-uppercase text-muted mb-0">SenderName <small>Timestamp</small></h5>
+                                    <!-- <span class="h2 font-weight-bold mb-0">Message Body Goes here</span> -->
+                                    <p style="word-break: break-all;white-space: normal;">Message Body</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="text-right">
+                          <div class="dropdown">
+                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fas fa-ellipsis-v"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                              <a class="dropdown-item" href="#">Message User</a>
+                              <a class="dropdown-item" href="#">Report Message</a>
+                            </div>
+                          </div>
+                        </td>
+                    </tr>
+                    <!-- End Sample Text Message -->
+
+                    <!-- Sample Image Message -->
+                    <!-- End Sample Image Message -->
+
+                    <!-- Sample Video Message -->
+                    <!-- End Sample Video Message -->
+
+                    <!-- Sample Poll Message -->
+                    <!-- End Sample Poll Message -->
+
+                    <!-- End Sample Chats -->
+                </tbody>
+              </table>
+              <h6 style="padding-left: 15px;" id="chatSPAChatTypingIndicator" hidden></h6>
+            </div>
+            <div class="card-footer py-4">
+                <!-- Send Message Container -->
+                <div class="container" id="sendMessagesFullContainer">
+                    <div id="uploadMediaButtonContainer" class="input-group">
+                      <!-- <span class="input-group-btn"><button class="btn btn-primary" id="btn-uploadMedia" onclick="chatMatSPA.handleMediaUpload();return false;"><i class="fa fa-image fa-1x" aria-hidden="true"></i></button></span> -->
+                      <span id="sendMessageInputContainer" style="width:80%"><input id="chatMat-textInput" type="text" class="form-control input-sm chat_input" placeholder="Write your message here..." /></span>
+                      <span id="sendMessageButtonContainer" class="input-group-btn"><button onclick="chatMatSPA.handleTextInput();return false;" class="btn btn-primary btn-sm" id="btn-chat-submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button></span>
+                    </div>
+                    <!-- <input class="form-control textarea" type="text" placeholder="Type here!"/> -->
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    <!-- End Setup for Chat-->
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+            <div class="copyright text-center text-xl-left text-muted">
+              &copy; 2020 <a href="#" class="font-weight-bold ml-1" target="_blank">{{appName}}</a>
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+              <!-- <li class="nav-item"><a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a></li> -->
+              <!-- <li class="nav-item"><a href="http://blog.creative-tim.com" class="nav-link" target="_blank">Blog</a></li> -->
+              <!-- <li class="nav-item"><a href="https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md" class="nav-link" target="_blank">MIT License</a></li> -->
+            </ul>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!--   Core   -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.21.7.js"></script>
+  <script>window.jQuery || document.write('<script src="./js/jquery-slim.min.js"><\/script>')</script>
+  <script async src='https://www.googletagmanager.com/gtag/js?id={{googleAnalytics}}'></script><script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', '{{googleAnalytics}}');</script>
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(c,a){if(!a.__SV){var b=window;try{var d,m,j,k=b.location,f=k.hash;d=function(a,b){return(m=a.match(RegExp(b+"=([^&]*)")))?m[1]:null};f&&d(f,"state")&&(j=JSON.parse(decodeURIComponent(d(f,"state"))),"mpeditor"===j.action&&(b.sessionStorage.setItem("_mpcehash",f),history.replaceState(j.desiredHash||"",c.title,k.pathname+k.search)))}catch(n){}var l,h;window.mixpanel=a;a._i=[];a.init=function(b,d,g){function c(b,i){var a=i.split(".");2==a.length&&(b=b[a[0]],i=a[1]);b[i]=function(){b.push([i].concat(Array.prototype.slice.call(arguments,0)))}}var e=a;"undefined"!==typeof g?e=a[g]=[]:g="mixpanel";e.people=e.people||[];e.toString=function(b){var a="mixpanel";"mixpanel"!==g&&(a+="."+g);b||(a+=" (stub)");return a};e.people.toString=function(){return e.toString(1)+".people (stub)"};l="disable time_event track track_pageview track_links track_forms track_with_groups add_group set_group remove_group register register_once alias unregister identify name_tag set_config reset opt_in_tracking opt_out_tracking has_opted_in_tracking has_opted_out_tracking clear_opt_in_out_tracking people.set people.set_once people.unset people.increment people.append people.union people.track_charge people.clear_charges people.delete_user people.remove".split(" "); for(h=0;h<l.length;h++)c(e,l[h]);var f="set set_once union unset remove delete".split(" ");e.get_group=function(){function a(c){b[c]=function(){call2_args=arguments;call2=[c].concat(Array.prototype.slice.call(call2_args,0));e.push([d,call2])}}for(var b={},d=["get_group"].concat(Array.prototype.slice.call(arguments,0)),c=0;c<f.length;c++)a(f[c]);return b};a._i.push([b,d,g])};a.__SV=1.2;b=c.createElement("script");b.type="text/javascript";b.async=!0;b.src="undefined"!==typeof MIXPANEL_CUSTOM_LIB_URL? MIXPANEL_CUSTOM_LIB_URL:"file:"===c.location.protocol&&"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//)?"https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js":"//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";d=c.getElementsByTagName("script")[0];d.parentNode.insertBefore(b,d)}})(document,window.mixpanel||[]); mixpanel.init("{{mixpanelToken}}");</script>
+  <!-- end Mixpanel -->
+  <script src="./js/chatSPA.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/8.11.8/sweetalert2.all.js"></script>
+  <!--   Optional JS   -->
+  <!--   Argon JS   -->
+  <!-- <script src="./js/argon-dashboard.min.js?v=1.1.0"></script> -->
+  <script src="https://cdn.pubnub.com/sdk/javascript/pubnub.4.27.1.min.js"></script>
+  <script>
+  // Launch the Login SPA
+  $(document).ready(function(){
+      chatSPA.launcher();
+  });
+  </script>
+</body>
+
+</html>
