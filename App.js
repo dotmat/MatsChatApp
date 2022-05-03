@@ -28,14 +28,32 @@ const config = require('./Config');
 //const commands = require('./Commands');
 var authy = require('authy')(config.authy);
 
-const mariaDBConnectionPool = mariadb.createPool({host: config.mariaDBHost, user:config.mariaDBUser, password: config.mariaDBPassword,database: config.mariaDBDatabase});
-var mariaDBConnection = null;
+// Check for the presense of DB Credentials. if no credentials error with an alert message
+if(config.mariaDBHost == null || config.mariaDBHost == ""){
+    console.log('Was unable to find Database credentials, please check the Config.JS file for missing credentials.');
+    process.exit(1);
+} else {
+    const mariaDBConnectionPool = mariadb.createPool({host: config.mariaDBHost, user:config.mariaDBUser, password: config.mariaDBPassword,database: config.mariaDBDatabase});
+    var mariaDBConnection = null;
+}
 
-var mailgunClient = require('mailgun-js')({apiKey: config.mailGunAPIKey, domain: config.mailGunDomain});
-const nexmoClient = new Nexmo({apiKey: config.nexmoAPIKey,apiSecret: config.nexmoAuthToken,});
-const mixpanel = Mixpanel.init(config.mixpanelID, {
-    protocol: 'https'
-});
+
+if(config.useMailGunEmail == true){
+    var mailgunClient = require('mailgun-js')({apiKey: config.mailGunAPIKey, domain: config.mailGunDomain});
+}
+
+if(config.useNexmo == true){
+    const nexmoClient = new Nexmo({apiKey: config.nexmoAPIKey,apiSecret: config.nexmoAuthToken,});
+}
+
+if(config.useMixpanel == true){
+    const mixpanel = Mixpanel.init(config.mixpanelID, {
+        protocol: 'https'
+    });
+}
+
+
+
 
 const app = express();
 app.use(express.static('public'));
